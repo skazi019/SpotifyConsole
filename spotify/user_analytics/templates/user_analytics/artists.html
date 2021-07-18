@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Spotify - Artists</title>
+	<link rel="stylesheet" href="{% static 'user_analytics/artists.css' %}">
+</head>
+<body>
+	<div class="artist-container">
+		<div class="artists-header">
+			<div class="artists-heading">Your Top Artists</div>
+			<ul class="artists-time-options">
+				<li><button id="artist-short-btn" onclick="pastMonth()">Past Month</button></li>
+				<li><button id="artist-medium-btn" onclick="pastSixMonth()">Past Six Months</button></li>
+				<li><button id="artist-long-btn" onclick="allTime()">All Time</button></li>
+			</ul>
+		</div>
+		<div class="artists-data">
+			<div id="artists-data-past-month" class="artists-data-list">
+				{% for artist in artists_data_short %}
+				<a href="{{ artist.external_urls.spotify }}">
+					<img src="{{ artist.images.1.url }}" alt="" class="artist-image">
+					<span class="artist-name">{{ artist.name }}</span>
+				</a>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="artists-data">
+			<div id="artists-data-past-sixmonth" class="artists-data-list">
+				{% for artist in artists_data_medium %}
+				<a href="{{ artist.external_urls.spotify }}">
+					<img src="{{ artist.images.1.url }}" alt="" class="artist-image">
+					<span class="artist-name">{{ artist.name }}</span>
+				</a>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="artists-data">
+			<div id="artists-data-all-time" class="artists-data-list">
+				{% for artist in artists_data_long %}
+				<a href="{{ artist.external_urls.spotify }}">
+					<img src="{{ artist.images.1.url }}" alt="" class="artist-image">
+					<span class="artist-name">{{ artist.name }}</span>
+				</a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="{% static 'user_analytics/artists.js' %}"></script>
+</body>
+</html>

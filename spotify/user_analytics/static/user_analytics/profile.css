@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --backgroundcolor: rgb(32, 32, 32);
+  --spotifytext: rgb(87, 234, 139);
+  --spotifygreen: rgb(33, 177, 84);
+  --spotifygreentext: rgb(238, 236, 233);
+  --spotifygray: rgb(170, 170, 170);
+}
+
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  background-color: var(--backgroundcolor);
+  color: var(--spotifygreentext);
+  margin: auto;
+  font-family: 'Roboto';
+}
+
+.profile-data {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2em;
+  margin: 0 auto;
+}
+
+.profile-data .user-image-name {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-data .user-image-name img {
+  height: 10em;
+  width: 10em;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.profile-data .user-image-name .user-name {
+  margin-top: .7em;
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.profile-data .user-info {
+  margin: auto;
+}
+
+.profile-data .user-info .info {
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+.profile-data .user-info .info li {
+  padding-left: 0;
+  padding: 1em;
+  font-size: 1em;
+  text-align: center;
+}
+
+.profile-data .user-info .info li .sub-text {
+  display: block;
+  color: var(--spotifygray);
+  font-size: .7em;
+}
+
+.artist-track-div {
+  margin-top: 3em;
+  font-size: .9em;
+}
+
+.artist-track-div .data-div {
+  padding: .5em 2em;
+}
+
+.artist-track-div .data-div .data-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.artist-track-div .data-div .data-header .data-heading {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.artist-track-div .data-div .data-header .data-see-more {
+  text-decoration: none;
+  color: var(--spotifygreentext);
+  border: 1px solid var(--spotifygray);
+  border-radius: 2em;
+  padding: .5em 1em;
+  font-size: .8em;
+}
+
+.artist-track-div .data-div .artists-list {
+  margin-top: 1em;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.artist-track-div .data-div .artists-list .artist-item {
+  padding-bottom: 1em;
+}
+
+.artist-track-div .data-div .artists-list .artist-item a {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  gap: 1em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: var(--spotifygreentext);
+}
+
+.artist-track-div .data-div .artists-list .artist-item .data-image {
+  width: 3.5em;
+  height: 3.5em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.artist-track-div .data-div .artists-list .artist-item:last-child {
+  padding-bottom: 0;
+}
+
+.artist-track-div .data-div .track-list {
+  margin-top: 1em;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.artist-track-div .data-div .track-list .track-item {
+  padding-bottom: 1em;
+}
+
+.artist-track-div .data-div .track-list .track-item a {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+  gap: 1em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: var(--spotifygreentext);
+}
+
+.artist-track-div .data-div .track-list .track-item a .data-image {
+  width: 3.5em;
+  height: 3.5em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.artist-track-div .data-div .track-list .track-item a .track-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.artist-track-div .data-div .track-list .track-item a .track-details .track-artist-album {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: .8em;
+  color: var(--spotifygray);
+  gap: .5em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.artist-track-div .data-div .track-list .track-item a .track-details .track-artist-album .data-dot-separator {
+  height: .2em;
+  width: .2em;
+  background-color: var(--spotifygray);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.artist-track-div .data-div .track-list .track-item a:last-child {
+  padding-bottom: 0;
+}
+
+.artist-track-div .data-div .track-list .track-item .track-duration {
+  font-size: .8em;
+  color: var(--spotifygreentext);
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 480px) {
+  .artist-track-div {
+    max-width: 480px;
+    margin: 3em auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .artist-track-div {
+    max-width: 768px;
+    margin: 3em auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    gap: 1em;
+  }
+  .artist-track-div .data-div {
+    padding: 1em 2em;
+    width: 50%;
+  }
+  .artist-track-div .data-div:nth-child(2) .data-header {
+    margin-top: 1em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .artist-track-div {
+    max-width: 1024px;
+    margin: 3em auto;
+  }
+  .artist-track-div .data-div .data-header .data-heading {
+    font-size: 1.3em;
+  }
+  .artist-track-div .data-div .data-header .data-see-more {
+    font-size: 1em;
+  }
+}
+/*# sourceMappingURL=profile.css.map */

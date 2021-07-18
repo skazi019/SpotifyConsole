@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load custom_filters %}
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'user_analytics/recent_track.css' %}">
+	<title>Spotify - Recents Tracks</title>
+</head>
+<body>
+
+	<div class="track-container">
+
+		<div class="tracks-header">
+			<div class="tracks-heading">Recenty Played</div>
+		</div>
+
+		<div class="track-data">
+			<div id="track-data-past-month" class="track-data-list">
+				<ul class="track-list">
+					{% for track in recent_tracks %}
+						<li class="track-item">
+							<a href="{% url 'album' track.track.album.id %}">
+								<img src="{{ track.track.album.images.2.url }}" alt="{{ track.track.album.id }}" class="data-image">
+								<div class="track-details">
+									<div class="data-name">{{ track.track.name }}</div>
+									<div class="track-artist-album">
+										<div class="data-artist">{{ track.track.artists.0.name }}</div>
+									</div>
+								</div>
+								<div class="track-duration">{{ track.track.duration_ms|ms_to_m_s }}</div>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
