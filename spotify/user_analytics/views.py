@@ -42,9 +42,6 @@ def spotify_callback(request):
     expires_in = token_url['expires_in']
     refresh_token = token_url['refresh_token']
 
-    print('='*50)
-    print(token_url)
-    print('='*50)
 
     expiry = datetime.datetime.now() + datetime.timedelta(seconds=expires_in)
     t = SpotifyTokens.objects.create(sesssionkey=request.session.session_key, access_token=access_token, refresh_token=refresh_token, expires=expiry)
@@ -59,8 +56,6 @@ def spotify_callback(request):
     t.top_tracks_medium = top_tracks_medium
     t.top_tracks_long = top_tracks_long
     t.save()
-    print(t)
-    print('='*50)
     return redirect('user_profile')
 
 
@@ -191,7 +186,6 @@ def recent_page(request):
 
 
 def get_album(request, id):
-    print(f'Id received: {id}')
     if not request.session.exists(request.session.session_key):
         return redirect('login')
     try:
