@@ -5,24 +5,7 @@
   --spotifygreen: rgb(33, 177, 84);
   --spotifygreentext: rgb(238, 236, 233);
   --spotifygray: rgb(170, 170, 170);
-}
-
-@-webkit-keyframes FadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes FadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  --spotifybackground: rgb(45, 45, 45);
 }
 
 body {
@@ -32,7 +15,66 @@ body {
   font-family: 'Roboto';
 }
 
-.profile-data {
+.navbar {
+  width: 5em;
+  height: 100vh;
+  background-color: var(--spotifybackground);
+  position: fixed;
+}
+
+.navbar .navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 100%;
+  gap: 2em;
+}
+
+.navbar .navbar-nav .nav-item {
+  width: 70%;
+}
+
+.navbar .navbar-nav .nav-item a {
+  text-decoration: none;
+  color: var(--spotifygreentext);
+}
+
+.navbar .navbar-nav .nav-item:first-child {
+  top: 0;
+  margin-top: 1em;
+  position: absolute;
+}
+
+.navbar .navbar-nav .nav-item:first-child img {
+  height: 3em;
+  width: 3em;
+}
+
+.navbar .navbar-nav .nav-item:last-child {
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 1em;
+}
+
+main {
+  margin: 0 2em;
+}
+
+main .profile-data {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -41,11 +83,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 2em;
+  padding-top: 5em;
   margin: 0 auto;
 }
 
-.profile-data .user-image-name {
+main .profile-data .user-image-name {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -56,25 +98,25 @@ body {
           align-items: center;
 }
 
-.profile-data .user-image-name img {
+main .profile-data .user-image-name img {
   height: 10em;
   width: 10em;
   border-radius: 50%;
   margin: auto;
 }
 
-.profile-data .user-image-name .user-name {
-  margin-top: .7em;
-  font-size: 2em;
+main .profile-data .user-image-name .user-name {
+  margin-top: .5em;
+  font-size: 3em;
   font-weight: 500;
   text-align: center;
 }
 
-.profile-data .user-info {
+main .profile-data .user-info {
   margin: auto;
 }
 
-.profile-data .user-info .info {
+main .profile-data .user-info .info {
   margin: 0;
   padding: 0;
   display: -ms-grid;
@@ -90,29 +132,29 @@ body {
   list-style-type: none;
 }
 
-.profile-data .user-info .info li {
+main .profile-data .user-info .info li {
   padding-left: 0;
   padding: 1em;
   font-size: 1em;
   text-align: center;
 }
 
-.profile-data .user-info .info li .sub-text {
+main .profile-data .user-info .info li .sub-text {
   display: block;
   color: var(--spotifygray);
   font-size: .7em;
 }
 
-.artist-track-div {
+main .artist-track-div {
   margin-top: 3em;
   font-size: .9em;
 }
 
-.artist-track-div .data-div {
+main .artist-track-div .data-div {
   padding: .5em 2em;
 }
 
-.artist-track-div .data-div .data-header {
+main .artist-track-div .data-div .data-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,12 +166,12 @@ body {
           align-items: center;
 }
 
-.artist-track-div .data-div .data-header .data-heading {
+main .artist-track-div .data-div .data-header .data-heading {
   font-size: 1em;
   font-weight: 500;
 }
 
-.artist-track-div .data-div .data-header .data-see-more {
+main .artist-track-div .data-div .data-header .data-see-more {
   text-decoration: none;
   color: var(--spotifygreentext);
   border: 1px solid var(--spotifygray);
@@ -138,17 +180,17 @@ body {
   font-size: .8em;
 }
 
-.artist-track-div .data-div .artists-list {
+main .artist-track-div .data-div .artists-list {
   margin-top: 1em;
   list-style-type: none;
   padding-left: 0;
 }
 
-.artist-track-div .data-div .artists-list .artist-item {
+main .artist-track-div .data-div .artists-list .artist-item {
   padding-bottom: 1em;
 }
 
-.artist-track-div .data-div .artists-list .artist-item a {
+main .artist-track-div .data-div .artists-list .artist-item a {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr;
@@ -164,7 +206,7 @@ body {
   color: var(--spotifygreentext);
 }
 
-.artist-track-div .data-div .artists-list .artist-item .data-image {
+main .artist-track-div .data-div .artists-list .artist-item .data-image {
   width: 3.5em;
   height: 3.5em;
   -o-object-fit: cover;
@@ -172,21 +214,21 @@ body {
   border-radius: 50%;
 }
 
-.artist-track-div .data-div .artists-list .artist-item:last-child {
+main .artist-track-div .data-div .artists-list .artist-item:last-child {
   padding-bottom: 0;
 }
 
-.artist-track-div .data-div .track-list {
+main .artist-track-div .data-div .track-list {
   margin-top: 1em;
   list-style-type: none;
   padding-left: 0;
 }
 
-.artist-track-div .data-div .track-list .track-item {
+main .artist-track-div .data-div .track-list .track-item {
   padding-bottom: 1em;
 }
 
-.artist-track-div .data-div .track-list .track-item a {
+main .artist-track-div .data-div .track-list .track-item a {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr auto;
@@ -202,14 +244,14 @@ body {
   color: var(--spotifygreentext);
 }
 
-.artist-track-div .data-div .track-list .track-item a .data-image {
+main .artist-track-div .data-div .track-list .track-item a .data-image {
   width: 3.5em;
   height: 3.5em;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.artist-track-div .data-div .track-list .track-item a .track-details {
+main .artist-track-div .data-div .track-list .track-item a .track-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,7 +261,7 @@ body {
           flex-direction: column;
 }
 
-.artist-track-div .data-div .track-list .track-item a .track-details .track-artist-album {
+main .artist-track-div .data-div .track-list .track-item a .track-details .track-artist-album {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,7 +276,7 @@ body {
           align-items: center;
 }
 
-.artist-track-div .data-div .track-list .track-item a .track-details .track-artist-album .data-dot-separator {
+main .artist-track-div .data-div .track-list .track-item a .track-details .track-artist-album .data-dot-separator {
   height: .2em;
   width: .2em;
   background-color: var(--spotifygray);
@@ -242,11 +284,11 @@ body {
   opacity: 0.7;
 }
 
-.artist-track-div .data-div .track-list .track-item a:last-child {
+main .artist-track-div .data-div .track-list .track-item a:last-child {
   padding-bottom: 0;
 }
 
-.artist-track-div .data-div .track-list .track-item .track-duration {
+main .artist-track-div .data-div .track-list .track-item .track-duration {
   font-size: .8em;
   color: var(--spotifygreentext);
   opacity: 0.7;

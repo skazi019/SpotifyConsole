@@ -12,7 +12,38 @@
 <body>
 
 	<nav class="navbar">
-
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a href="{% url 'user_profile' %}" class="nav-link">
+					<img src="{% static 'user_analytics/spotify-icons-logos/spotify-icons-logos/icons/01_RGB/02_PNG/Spotify_Icon_RGB_Green.png' %}" alt="">
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="{% url 'user_profile' %}" class="nav-link">
+					<span class="link-text">Profile</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">
+					<span class="link-text">Top Artists</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">
+					<span class="link-text">Top Tracks</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">
+					<span class="link-text">Recent Tracks</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="https://github.com/skazi019/SpotifyConsole" class="nav-link" target="blank">
+					<span class="link-text">Github</span>
+				</a>
+			</li>
+		</ul>
 	</nav>
 
 	<main>

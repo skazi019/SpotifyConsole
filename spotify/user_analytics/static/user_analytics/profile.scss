@@ -6,18 +6,9 @@
 	--spotifygreen: rgb(33, 177, 84);
 	--spotifygreentext: rgb(238, 236, 233);
 	--spotifygray: rgb(170, 170, 170);
+	--spotifybackground: rgb(45, 45, 45);
 }
 
-@keyframes FadeIn {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-	
-}
 
 body {
 	// box-sizing: border-box;
@@ -27,183 +18,232 @@ body {
 	font-family: 'Roboto';
 }
 
-.profile-data {
-	display: grid;
-	justify-content: center;
-	align-items: center;
-	padding-top: 2em;
-	margin: 0 auto;
+.navbar {
+	width: 5em;
+	height: 100vh;
+	background-color: var(--spotifybackground);
+	position: fixed;
 
-	.user-image-name {
+	.navbar-nav {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		height: 100%;
+		gap: 2em;
+
+		.nav-item {
+			width: 70%;
+
+			a {
+				text-decoration: none;
+				color: var(--spotifygreentext);
+			}
+		}
+
+		.nav-item:first-child {
+			top: 0;
+			margin-top: 1em;
+			position: absolute;
+			img {
+				height: 3em;
+				width: 3em;
+			}
+		}
+
+		.nav-item:last-child {
+			bottom: 0;
+			position: absolute;
+			margin-bottom: 1em;
+		}
+	}
+}
+
+main {
+	margin: 0 2em;
+
+	.profile-data {
 		display: grid;
 		justify-content: center;
 		align-items: center;
+		padding-top: 5em;
+		margin: 0 auto;
 
-		img {
-			height: 10em;
-			width: 10em;
-			border-radius: 50%;
-			margin: auto;
-		}
-
-		.user-name {
-			margin-top: .7em;
-			font-size: 2em;
-			font-weight: 500;
-			text-align: center;
-		}
-
-	}
-
-	.user-info {
-		margin: auto;
-
-		.info {
-			margin: 0;
-			padding: 0;
+		.user-image-name {
 			display: grid;
-			grid-template-columns: 1fr 1fr;
 			justify-content: center;
 			align-items: center;
-			list-style-type: none;
 
-			li {
-				padding-left: 0;
-				padding: 1em;
-				font-size: 1em;
+			img {
+				height: 10em;
+				width: 10em;
+				border-radius: 50%;
+				margin: auto;
+			}
+
+			.user-name {
+				margin-top: .5em;
+				font-size: 3em;
+				font-weight: 500;
 				text-align: center;
+			}
 
-				.sub-text {
-					display: block;
-					color: var(--spotifygray);
-					font-size: .7em;
-				}
-			}	
 		}
+
+		.user-info {
+			margin: auto;
+
+			.info {
+				margin: 0;
+				padding: 0;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				justify-content: center;
+				align-items: center;
+				list-style-type: none;
+
+				li {
+					padding-left: 0;
+					padding: 1em;
+					font-size: 1em;
+					text-align: center;
+
+					.sub-text {
+						display: block;
+						color: var(--spotifygray);
+						font-size: .7em;
+					}
+				}	
+			}
+		}
+
 	}
 
-}
+	.artist-track-div {
+		margin-top: 3em;
+		font-size: .9em;
+		// display: flex;
+		// justify-content: space-around;
+		// width: 100%;
+		// gap: 1em;
 
-.artist-track-div {
-	margin-top: 3em;
-	font-size: .9em;
-	// display: flex;
-	// justify-content: space-around;
-	// width: 100%;
-	// gap: 1em;
+		.data-div {
+			padding: .5em 2em;
+			// width: 50%;
 
-	.data-div {
-		padding: .5em 2em;
-		// width: 50%;
-
-		.data-header {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			
-			.data-heading {
-				font-size: 1em;
-				font-weight: 500;
-			}
-			
-			.data-see-more {
-				text-decoration: none;
-				color: var(--spotifygreentext);
-				border: 1px solid var(--spotifygray);
-				border-radius: 2em;
-				padding: .5em 1em;
-				font-size: .8em;
-			}
-		}
-
-		.artists-list {
-			margin-top: 1em;
-			list-style-type: none;
-			padding-left: 0;
-
-			.artist-item {
-				padding-bottom: 1em;
-
-				a {
-					display: grid;
-					grid-template-columns: auto 1fr;
-					gap : 1em;
-					justify-content: start;
-					align-items: center;
+			.data-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				
+				.data-heading {
+					font-size: 1em;
+					font-weight: 500;
+				}
+				
+				.data-see-more {
 					text-decoration: none;
 					color: var(--spotifygreentext);
-				}
-				.data-image {
-					width: 3.5em;
-					height: 3.5em;
-					object-fit: cover;
-					border-radius: 50%;
-				}
-
-				&:last-child {
-					padding-bottom: 0;
+					border: 1px solid var(--spotifygray);
+					border-radius: 2em;
+					padding: .5em 1em;
+					font-size: .8em;
 				}
 			}
-		}
 
-		.track-list{
-			margin-top: 1em;
-			list-style-type: none;
-			padding-left: 0;
+			.artists-list {
+				margin-top: 1em;
+				list-style-type: none;
+				padding-left: 0;
 
-			.track-item {
-				padding-bottom: 1em;
+				.artist-item {
+					padding-bottom: 1em;
 
-				a {
-					display: grid;
-					grid-template-columns: auto 1fr auto;
-					gap : 1em;
-					justify-content: start;
-					align-items: center;
-					text-decoration: none;
-					color: var(--spotifygreentext);
-
+					a {
+						display: grid;
+						grid-template-columns: auto 1fr;
+						gap : 1em;
+						justify-content: start;
+						align-items: center;
+						text-decoration: none;
+						color: var(--spotifygreentext);
+					}
 					.data-image {
 						width: 3.5em;
 						height: 3.5em;
 						object-fit: cover;
-					}
-
-					.track-details {
-						display: flex;
-						flex-direction: column;
-
-						.track-artist-album {
-							display: flex;
-							font-size: .8em;
-							color: var(--spotifygray);
-							gap: .5em;
-							justify-content: start;
-							align-items: center;
-
-							.data-dot-separator {
-								height: .2em;
-								width: .2em;
-								background-color: var(--spotifygray);
-								border-radius: 50%;
-								opacity: 0.7;
-							}
-						}
+						border-radius: 50%;
 					}
 
 					&:last-child {
 						padding-bottom: 0;
 					}
 				}
+			}
 
-				.track-duration {
-					font-size: .8em;
-					color: var(--spotifygreentext);
-					opacity: 0.7;
+			.track-list{
+				margin-top: 1em;
+				list-style-type: none;
+				padding-left: 0;
+
+				.track-item {
+					padding-bottom: 1em;
+
+					a {
+						display: grid;
+						grid-template-columns: auto 1fr auto;
+						gap : 1em;
+						justify-content: start;
+						align-items: center;
+						text-decoration: none;
+						color: var(--spotifygreentext);
+
+						.data-image {
+							width: 3.5em;
+							height: 3.5em;
+							object-fit: cover;
+						}
+
+						.track-details {
+							display: flex;
+							flex-direction: column;
+
+							.track-artist-album {
+								display: flex;
+								font-size: .8em;
+								color: var(--spotifygray);
+								gap: .5em;
+								justify-content: start;
+								align-items: center;
+
+								.data-dot-separator {
+									height: .2em;
+									width: .2em;
+									background-color: var(--spotifygray);
+									border-radius: 50%;
+									opacity: 0.7;
+								}
+							}
+						}
+
+						&:last-child {
+							padding-bottom: 0;
+						}
+					}
+
+					.track-duration {
+						font-size: .8em;
+						color: var(--spotifygreentext);
+						opacity: 0.7;
+					}
 				}
 			}
-		}
 
+		}
 	}
 }
 

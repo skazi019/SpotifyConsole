@@ -130,8 +130,8 @@ def user_profile(request):
         return redirect('login')
 
     user_data = token.profile_data
-    artists_data = token.top_artists_long['items'][:5]
-    track_data = token.top_tracks_long['items'][:5]
+    artists_data = token.top_artists_long['items'][:10]
+    track_data = token.top_tracks_long['items'][:10]
 
     return render(request, "user_analytics/profile.html", {'user_data' : user_data, 'artists_data' : artists_data, 'track_data' : track_data})
 
