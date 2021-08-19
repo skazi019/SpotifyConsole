@@ -41,9 +41,14 @@ body {
 
 			a {
 				text-decoration: none;
-				color: var(--spotifygreentext);
+				color: var(--spotifygray);
+
+				.link-text:hover {
+					color: var(--spotifygreentext);
+				}
 			}
 		}
+
 
 		.nav-item:first-child {
 			top: 0;

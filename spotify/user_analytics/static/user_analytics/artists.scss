@@ -6,6 +6,7 @@
 	--spotifygreen: rgb(33, 177, 84);
 	--spotifygreentext: rgb(238, 236, 233);
 	--spotifygray: rgb(170, 170, 170);
+	--spotifybackground: rgb(45, 45, 45);
 }
 
 body {
@@ -16,9 +17,58 @@ body {
 	font-family: 'Roboto';
 }
 
+.navbar {
+	width: 5em;
+	height: 100vh;
+	background-color: var(--spotifybackground);
+	position: fixed;
+
+	.navbar-nav {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		height: 100%;
+		gap: 2em;
+
+		.nav-item {
+			width: 70%;
+
+			a {
+				text-decoration: none;
+				color: var(--spotifygray);
+
+				.link-text:hover {
+					color: var(--spotifygreentext);
+				}
+			}
+		}
+
+
+		.nav-item:first-child {
+			top: 0;
+			margin-top: 1em;
+			position: absolute;
+			img {
+				height: 3em;
+				width: 3em;
+			}
+		}
+
+		.nav-item:last-child {
+			bottom: 0;
+			position: absolute;
+			margin-bottom: 1em;
+		}
+	}
+}
 
 .artist-container {
-	margin: 3em 2em;
+	padding: 3em 7em;
 
 	.artists-header {
 		display: flex;
@@ -117,7 +167,7 @@ body {
 
 @media screen and (min-width: 768px) {
 	.artist-container {
-		margin: 3em 4em;
+		padding: 3em 7em;
 
 		.artists-header {
 			max-width: 480px;

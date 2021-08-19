@@ -50,6 +50,10 @@ body {
 
 .navbar .navbar-nav .nav-item a {
   text-decoration: none;
+  color: var(--spotifygray);
+}
+
+.navbar .navbar-nav .nav-item a .link-text:hover {
   color: var(--spotifygreentext);
 }
 
