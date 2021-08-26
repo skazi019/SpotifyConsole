@@ -75,8 +75,8 @@ body {
 }
 
 main {
-  position: absolute;
-  margin: 0 5em;
+  position: relative;
+  padding: 0 5em;
   left: 5em;
 }
 
@@ -173,7 +173,7 @@ main .artist-track-div .data-div .data-header {
 }
 
 main .artist-track-div .data-div .data-header .data-heading {
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: 500;
 }
 
@@ -181,7 +181,7 @@ main .artist-track-div .data-div .data-header .data-see-more {
   border-radius: 2em;
   border: 1px solid var(--spotifygray);
   color: var(--spotifygreentext);
-  font-size: .8em;
+  font-size: 1em;
   padding: .5em 1em;
   text-decoration: none;
 }
@@ -193,7 +193,7 @@ main .artist-track-div .data-div .artists-list {
 }
 
 main .artist-track-div .data-div .artists-list .artist-item {
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
 }
 
 main .artist-track-div .data-div .artists-list .artist-item a {
@@ -203,7 +203,7 @@ main .artist-track-div .data-div .artists-list .artist-item a {
   color: var(--spotifygreentext);
   display: -ms-grid;
   display: grid;
-  gap: 1em;
+  gap: 1.5em;
   -ms-grid-columns: auto 1fr;
       grid-template-columns: auto 1fr;
   -webkit-box-pack: start;
@@ -213,11 +213,15 @@ main .artist-track-div .data-div .artists-list .artist-item a {
 }
 
 main .artist-track-div .data-div .artists-list .artist-item .data-image {
-  width: 3.5em;
-  height: 3.5em;
+  width: 4.5em;
+  height: 4.5em;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+}
+
+main .artist-track-div .data-div .artists-list .artist-item .data-name {
+  font-size: 1.2em;
 }
 
 main .artist-track-div .data-div .artists-list .artist-item:last-child {
@@ -231,7 +235,7 @@ main .artist-track-div .data-div .track-list {
 }
 
 main .artist-track-div .data-div .track-list .track-item {
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
 }
 
 main .artist-track-div .data-div .track-list .track-item a {
@@ -241,7 +245,7 @@ main .artist-track-div .data-div .track-list .track-item a {
   color: var(--spotifygreentext);
   display: -ms-grid;
   display: grid;
-  gap: 1em;
+  gap: 1.5em;
   -ms-grid-columns: auto 1fr auto;
       grid-template-columns: auto 1fr auto;
   -webkit-box-pack: start;
@@ -251,8 +255,8 @@ main .artist-track-div .data-div .track-list .track-item a {
 }
 
 main .artist-track-div .data-div .track-list .track-item a .data-image {
-  width: 3.5em;
-  height: 3.5em;
+  width: 4.5em;
+  height: 4.5em;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -267,6 +271,10 @@ main .artist-track-div .data-div .track-list .track-item a .track-details {
           flex-direction: column;
 }
 
+main .artist-track-div .data-div .track-list .track-item a .track-details .data-name {
+  font-size: 1.2em;
+}
+
 main .artist-track-div .data-div .track-list .track-item a .track-details .track-artist-album {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -275,7 +283,7 @@ main .artist-track-div .data-div .track-list .track-item a .track-details .track
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: .8em;
+  font-size: 1em;
   gap: .5em;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -295,7 +303,7 @@ main .artist-track-div .data-div .track-list .track-item a:last-child {
 }
 
 main .artist-track-div .data-div .track-list .track-item .track-duration {
-  font-size: .8em;
+  font-size: 1em;
   color: var(--spotifygreentext);
   opacity: 0.7;
 }
@@ -318,7 +326,7 @@ main .artist-track-div .data-div .track-list .track-item .track-duration {
     gap: 1em;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin: 3em auto;
+    margin: 3em 5em;
     max-width: 768px;
     width: 100%;
   }
@@ -333,8 +341,8 @@ main .artist-track-div .data-div .track-list .track-item .track-duration {
 
 @media screen and (min-width: 1024px) {
   .artist-track-div {
-    max-width: 1024px;
-    margin: 3em auto;
+    max-width: 1270px;
+    margin: 3em 5em;
   }
   .artist-track-div .data-div .data-header .data-heading {
     font-size: 1.3em;

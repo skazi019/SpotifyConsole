@@ -69,8 +69,8 @@ body {
 }
 
 main {
-	position: absolute;
-	margin: 0 5em;
+	position: relative;
+	padding: 0 5em;
 	// max-width: 1024px;
 	left: 5em;
 
@@ -149,7 +149,7 @@ main {
 				align-items: center;
 				
 				.data-heading {
-					font-size: 1em;
+					font-size: 1.5em;
 					font-weight: 500;
 				}
 				
@@ -157,7 +157,7 @@ main {
 					border-radius: 2em;
 					border: 1px solid var(--spotifygray);
 					color: var(--spotifygreentext);
-					font-size: .8em;
+					font-size: 1em;
 					padding: .5em 1em;
 					text-decoration: none;
 				}
@@ -169,22 +169,26 @@ main {
 				padding-left: 0;
 
 				.artist-item {
-					padding-bottom: 1em;
+					padding-bottom: 1.5em;
 
 					a {
 						align-items: center;
 						color: var(--spotifygreentext);
 						display: grid;
-						gap : 1em;
+						gap : 1.5em;
 						grid-template-columns: auto 1fr;
 						justify-content: start;
 						text-decoration: none;
 					}
 					.data-image {
-						width: 3.5em;
-						height: 3.5em;
+						width: 4.5em;
+						height: 4.5em;
 						object-fit: cover;
 						border-radius: 50%;
+					}
+
+					.data-name {
+						font-size: 1.2em;
 					}
 
 					&:last-child {
@@ -199,20 +203,20 @@ main {
 				padding-left: 0;
 
 				.track-item {
-					padding-bottom: 1em;
+					padding-bottom: 1.5em;
 
 					a {
 						align-items: center;
 						color: var(--spotifygreentext);
 						display: grid;
-						gap : 1em;
+						gap : 1.5em;
 						grid-template-columns: auto 1fr auto;
 						justify-content: start;
 						text-decoration: none;
 
 						.data-image {
-							width: 3.5em;
-							height: 3.5em;
+							width: 4.5em;
+							height: 4.5em;
 							object-fit: cover;
 						}
 
@@ -220,11 +224,15 @@ main {
 							display: flex;
 							flex-direction: column;
 
+							.data-name {
+								font-size: 1.2em;
+							}
+
 							.track-artist-album {
 								align-items: center;
 								color: var(--spotifygray);
 								display: flex;
-								font-size: .8em;
+								font-size: 1em;
 								gap: .5em;
 								justify-content: start;
 
@@ -236,6 +244,7 @@ main {
 									width: .2em;
 								}
 							}
+
 						}
 
 						&:last-child {
@@ -244,7 +253,7 @@ main {
 					}
 
 					.track-duration {
-						font-size: .8em;
+						font-size: 1em;
 						color: var(--spotifygreentext);
 						opacity: 0.7;
 					}
@@ -271,7 +280,7 @@ main {
 		display: flex;
 		gap: 1em;
 		justify-content: space-around;
-		margin: 3em auto;
+		margin: 3em 5em;
 		max-width: 768px;
 		width: 100%;
 
@@ -294,8 +303,8 @@ main {
 @media screen and (min-width: 1024px){
 
 	.artist-track-div {
-		max-width: 1024px;
-		margin: 3em auto;
+		max-width: 1270px;
+		margin: 3em 5em;
 
 		.data-div{
 			.data-header {
