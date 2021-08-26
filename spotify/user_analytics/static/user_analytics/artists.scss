@@ -68,7 +68,9 @@ body {
 }
 
 .artist-container {
-	padding: 3em 7em;
+	position: absolute;
+	padding: 3em 4em;
+	left: 5em;
 
 	.artists-header {
 		display: flex;
@@ -167,7 +169,7 @@ body {
 
 @media screen and (min-width: 768px) {
 	.artist-container {
-		padding: 3em 7em;
+		padding: 3em auto;
 
 		.artists-header {
 			max-width: 480px;

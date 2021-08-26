@@ -2,11 +2,11 @@
 
 :root{
 	--backgroundcolor : rgb(32, 32, 32);
-	--spotifytext : rgb(87, 234, 139);
+	--spotifybackground: rgb(45, 45, 45);
+	--spotifygray: rgb(170, 170, 170);
 	--spotifygreen: rgb(33, 177, 84);
 	--spotifygreentext: rgb(238, 236, 233);
-	--spotifygray: rgb(170, 170, 170);
-	--spotifybackground: rgb(45, 45, 45);
+	--spotifytext : rgb(87, 234, 139);
 }
 
 
@@ -14,27 +14,27 @@ body {
 	// box-sizing: border-box;
 	background-color: var(--backgroundcolor);
 	color: var(--spotifygreentext);
-	margin: auto;
 	font-family: 'Roboto';
+	margin: auto;
 }
 
 .navbar {
-	width: 5em;
-	height: 100vh;
 	background-color: var(--spotifybackground);
+	height: 100vh;
 	position: fixed;
+	width: 5em;
 
 	.navbar-nav {
-		list-style: none;
-		padding: 0;
-		margin: 0;
+		align-items: center;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		height: 100%;
 		gap: 2em;
+		height: 100%;
+		justify-content: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
 
 		.nav-item {
 			width: 70%;
@@ -69,20 +69,22 @@ body {
 }
 
 main {
-	margin: 0 auto;
-	max-width: 1024px;
+	position: absolute;
+	margin: 0 5em;
+	// max-width: 1024px;
+	left: 5em;
 
 	.profile-data {
+		align-items: center;
 		display: grid;
 		justify-content: center;
-		align-items: center;
-		padding-top: 5em;
 		margin: 0 auto;
+		padding-top: 5em;
 
 		.user-image-name {
+			align-items: center;
 			display: grid;
 			justify-content: center;
-			align-items: center;
 
 			img {
 				height: 10em;
@@ -104,23 +106,23 @@ main {
 			margin: auto;
 
 			.info {
-				margin: 0;
-				padding: 0;
+				align-items: center;
 				display: grid;
 				grid-template-columns: 1fr 1fr;
 				justify-content: center;
-				align-items: center;
 				list-style-type: none;
+				margin: 0;
+				padding: 0;
 
 				li {
+					font-size: 1em;
 					padding-left: 0;
 					padding: 1em;
-					font-size: 1em;
 					text-align: center;
 
 					.sub-text {
-						display: block;
 						color: var(--spotifygray);
+						display: block;
 						font-size: .7em;
 					}
 				}	
@@ -152,12 +154,12 @@ main {
 				}
 				
 				.data-see-more {
-					text-decoration: none;
-					color: var(--spotifygreentext);
-					border: 1px solid var(--spotifygray);
 					border-radius: 2em;
-					padding: .5em 1em;
+					border: 1px solid var(--spotifygray);
+					color: var(--spotifygreentext);
 					font-size: .8em;
+					padding: .5em 1em;
+					text-decoration: none;
 				}
 			}
 
@@ -170,13 +172,13 @@ main {
 					padding-bottom: 1em;
 
 					a {
-						display: grid;
-						grid-template-columns: auto 1fr;
-						gap : 1em;
-						justify-content: start;
 						align-items: center;
-						text-decoration: none;
 						color: var(--spotifygreentext);
+						display: grid;
+						gap : 1em;
+						grid-template-columns: auto 1fr;
+						justify-content: start;
+						text-decoration: none;
 					}
 					.data-image {
 						width: 3.5em;
@@ -200,13 +202,13 @@ main {
 					padding-bottom: 1em;
 
 					a {
-						display: grid;
-						grid-template-columns: auto 1fr auto;
-						gap : 1em;
-						justify-content: start;
 						align-items: center;
-						text-decoration: none;
 						color: var(--spotifygreentext);
+						display: grid;
+						gap : 1em;
+						grid-template-columns: auto 1fr auto;
+						justify-content: start;
+						text-decoration: none;
 
 						.data-image {
 							width: 3.5em;
@@ -219,19 +221,19 @@ main {
 							flex-direction: column;
 
 							.track-artist-album {
+								align-items: center;
+								color: var(--spotifygray);
 								display: flex;
 								font-size: .8em;
-								color: var(--spotifygray);
 								gap: .5em;
 								justify-content: start;
-								align-items: center;
 
 								.data-dot-separator {
-									height: .2em;
-									width: .2em;
 									background-color: var(--spotifygray);
 									border-radius: 50%;
+									height: .2em;
 									opacity: 0.7;
+									width: .2em;
 								}
 							}
 						}
@@ -265,13 +267,13 @@ main {
 @media screen and (min-width: 768px){
 
 	.artist-track-div {
-		max-width: 768px;
-		margin: 3em auto;
-		display: flex;
-		justify-content: space-around;
 		align-items: center;
-		width: 100%;
+		display: flex;
 		gap: 1em;
+		justify-content: space-around;
+		margin: 3em auto;
+		max-width: 768px;
+		width: 100%;
 
 
 		.data-div {
