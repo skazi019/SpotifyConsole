@@ -14,12 +14,12 @@ no need to worry about data privacy. :)
 The goal of this project was to learn Django as well as CSS. Below are the few <br>
 conceptual learnings gained through this project.
 - function views
-- models
-- storing different data types in models like text, number, datetime, JSON
 - writing callback function
-- querying model to get anonymous data
-- page redirects
 - handling static files
 - handling templates
 - creating custom filters to be used in the HTML templates
 - Jinja2
+- models
+- storing different data types in models like text, number, datetime, JSON
+- querying model to get anonymous data
+- page redirects
