@@ -1,31 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
   --backgroundcolor: rgb(32, 32, 32);
-  --spotifytext: rgb(87, 234, 139);
+  --spotifybackground: rgb(45, 45, 45);
+  --spotifygray: rgb(170, 170, 170);
   --spotifygreen: rgb(33, 177, 84);
   --spotifygreentext: rgb(238, 236, 233);
-  --spotifygray: rgb(170, 170, 170);
-  --spotifybackground: rgb(45, 45, 45);
+  --spotifytext: rgb(87, 234, 139);
 }
 
 body {
   background-color: var(--backgroundcolor);
   color: var(--spotifygreentext);
-  margin: auto;
   font-family: 'Roboto';
+  margin: auto;
 }
 
 .navbar {
-  width: 5em;
-  height: 100vh;
   background-color: var(--spotifybackground);
+  height: 100vh;
   position: fixed;
+  width: 5em;
 }
 
 .navbar .navbar-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,15 +33,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 2em;
+  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  height: 100%;
-  gap: 2em;
 }
 
 .navbar .navbar-nav .nav-item {
@@ -75,31 +75,33 @@ body {
 }
 
 main {
-  margin: 0 2em;
+  position: relative;
+  padding: 0 5em;
+  left: 5em;
 }
 
 main .profile-data {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 5em;
   margin: 0 auto;
+  padding-top: 5em;
 }
 
 main .profile-data .user-image-name {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 main .profile-data .user-image-name img {
@@ -121,8 +123,9 @@ main .profile-data .user-info {
 }
 
 main .profile-data .user-info .info {
-  margin: 0;
-  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -130,22 +133,21 @@ main .profile-data .user-info .info {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 main .profile-data .user-info .info li {
+  font-size: 1em;
   padding-left: 0;
   padding: 1em;
-  font-size: 1em;
   text-align: center;
 }
 
 main .profile-data .user-info .info li .sub-text {
-  display: block;
   color: var(--spotifygray);
+  display: block;
   font-size: .7em;
 }
 
@@ -171,17 +173,17 @@ main .artist-track-div .data-div .data-header {
 }
 
 main .artist-track-div .data-div .data-header .data-heading {
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: 500;
 }
 
 main .artist-track-div .data-div .data-header .data-see-more {
-  text-decoration: none;
-  color: var(--spotifygreentext);
-  border: 1px solid var(--spotifygray);
   border-radius: 2em;
+  border: 1px solid var(--spotifygray);
+  color: var(--spotifygreentext);
+  font-size: 1em;
   padding: .5em 1em;
-  font-size: .8em;
+  text-decoration: none;
 }
 
 main .artist-track-div .data-div .artists-list {
@@ -191,31 +193,35 @@ main .artist-track-div .data-div .artists-list {
 }
 
 main .artist-track-div .data-div .artists-list .artist-item {
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
 }
 
 main .artist-track-div .data-div .artists-list .artist-item a {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto 1fr;
-      grid-template-columns: auto 1fr;
-  gap: 1em;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-decoration: none;
   color: var(--spotifygreentext);
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5em;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  text-decoration: none;
 }
 
 main .artist-track-div .data-div .artists-list .artist-item .data-image {
-  width: 3.5em;
-  height: 3.5em;
+  width: 4.5em;
+  height: 4.5em;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+}
+
+main .artist-track-div .data-div .artists-list .artist-item .data-name {
+  font-size: 1.2em;
 }
 
 main .artist-track-div .data-div .artists-list .artist-item:last-child {
@@ -229,28 +235,28 @@ main .artist-track-div .data-div .track-list {
 }
 
 main .artist-track-div .data-div .track-list .track-item {
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
 }
 
 main .artist-track-div .data-div .track-list .track-item a {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto 1fr auto;
-      grid-template-columns: auto 1fr auto;
-  gap: 1em;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-decoration: none;
   color: var(--spotifygreentext);
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5em;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  text-decoration: none;
 }
 
 main .artist-track-div .data-div .track-list .track-item a .data-image {
-  width: 3.5em;
-  height: 3.5em;
+  width: 4.5em;
+  height: 4.5em;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -265,27 +271,31 @@ main .artist-track-div .data-div .track-list .track-item a .track-details {
           flex-direction: column;
 }
 
+main .artist-track-div .data-div .track-list .track-item a .track-details .data-name {
+  font-size: 1.2em;
+}
+
 main .artist-track-div .data-div .track-list .track-item a .track-details .track-artist-album {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--spotifygray);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: .8em;
-  color: var(--spotifygray);
+  font-size: 1em;
   gap: .5em;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 main .artist-track-div .data-div .track-list .track-item a .track-details .track-artist-album .data-dot-separator {
-  height: .2em;
-  width: .2em;
   background-color: var(--spotifygray);
   border-radius: 50%;
+  height: .2em;
   opacity: 0.7;
+  width: .2em;
 }
 
 main .artist-track-div .data-div .track-list .track-item a:last-child {
@@ -293,7 +303,7 @@ main .artist-track-div .data-div .track-list .track-item a:last-child {
 }
 
 main .artist-track-div .data-div .track-list .track-item .track-duration {
-  font-size: .8em;
+  font-size: 1em;
   color: var(--spotifygreentext);
   opacity: 0.7;
 }
@@ -307,18 +317,18 @@ main .artist-track-div .data-div .track-list .track-item .track-duration {
 
 @media screen and (min-width: 768px) {
   .artist-track-div {
-    max-width: 768px;
-    margin: 3em auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     gap: 1em;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 3em 5em;
+    max-width: 768px;
+    width: 100%;
   }
   .artist-track-div .data-div {
     padding: 1em 2em;
@@ -331,8 +341,8 @@ main .artist-track-div .data-div .track-list .track-item .track-duration {
 
 @media screen and (min-width: 1024px) {
   .artist-track-div {
-    max-width: 1024px;
-    margin: 3em auto;
+    max-width: 1270px;
+    margin: 3em 5em;
   }
   .artist-track-div .data-div .data-header .data-heading {
     font-size: 1.3em;

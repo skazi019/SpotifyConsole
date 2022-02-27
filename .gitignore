@@ -1,2 +1,3 @@
 spotify/user_analytics/credentials.py
 spotify/user_analytics/credentials.pyc
+./user_analytics/db.sqlite3
