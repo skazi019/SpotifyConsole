@@ -42,6 +42,9 @@ def spotify_callback(request):
     expires_in = token_url['expires_in']
     refresh_token = token_url['refresh_token']
 
+    if request.session.session_key is None:
+        request.session.flush()
+        return redirect('login')
 
     expiry = datetime.datetime.now() + datetime.timedelta(seconds=expires_in)
     t = SpotifyTokens.objects.create(sesssionkey=request.session.session_key, access_token=access_token, refresh_token=refresh_token, expires=expiry)
