@@ -23,3 +23,6 @@ conceptual learnings gained through this project.
 - storing different data types in models like text, number, datetime, JSON
 - querying model to get anonymous data
 - page redirects
+
+### Demonstration
+<img src="SpotifyConsole.gif" height="480" width="640">
