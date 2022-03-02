@@ -25,4 +25,4 @@ conceptual learnings gained through this project.
 - page redirects
 
 ### Demonstration
-<img src="SpotifyConsole.gif" height="480" width="640">
+<img src="SpotifyConsole.gif" height="480" width="1080">
