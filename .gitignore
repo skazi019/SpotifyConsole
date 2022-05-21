@@ -3,3 +3,4 @@ spotify/user_analytics/credentials.pyc
 ./user_analytics/db.sqlite3
 spotify-env
 .env
+.venv

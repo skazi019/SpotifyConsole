@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load custom_filters %}
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'user_analytics/profile.css' %}">
+	<title>Spotify Console</title>
+</head>
+<body>
+
+	<nav class="navbar">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a href="{% url 'user_profile' %}" class="nav-link">
+					<img src="{% static 'user_analytics/spotify-icons-logos/spotify-icons-logos/icons/01_RGB/02_PNG/Spotify_Icon_RGB_Green.png' %}" alt="">
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="{% url 'user_profile' %}" class="nav-link">
+					<span class="link-text">Profile</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="{% url 'artists' %}" class="nav-link">
+					<span class="link-text">Top Artists</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="{% url 'tracks' %}" class="nav-link">
+					<span class="link-text">Top Tracks</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="{% url 'recent_tracks' %}" class="nav-link">
+					<span class="link-text">Recent Tracks</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="https://github.com/skazi019/SpotifyConsole" class="nav-link" target="blank">
+					<span class="link-text">Github</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main>
+		<div class="profile-data">
+			<div class="user-image-name">
+				<img src="{{ user_data.profileimage }}" alt="">
+				<div class="user-name">{{ user_data.name }}</div>
+			</div>
+		</div>
+
+		<div class="artist-track-div">
+			<div class="data-div">
+				<div class="data-header">
+					<div class="data-heading">Top Artists of All Time</div>
+					<a href="{% url 'artists' %}" class="data-see-more">See More</a>
+				</div>
+				<ul class="artists-list">
+					{% for artist in artists_data %}
+						<li class="artist-item">
+							<a href="{{ artist.external_urls.spotify }}">
+								<img src="{{ artist.images.2.url }}" alt="" class="data-image">
+								<div class="data-name">{{ artist.name }}</div>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+
+			<div class="data-div">
+				<div class="data-header">
+					<div class="data-heading">Top Tracks of All Time</div>
+					<a href="{% url 'tracks' %}" class="data-see-more">See More</a>
+				</div>
+				<ul class="track-list">
+					{% for track in track_data %}
+						<li class="track-item">
+							<a href="{% url 'album' track.album.id %}">
+								<img src="{{ track.album.images.2.url }}" alt="" class="data-image">
+								<div class="track-details">
+									<div class="data-name">{{ track.name }}</div>
+									<div class="track-artist-album">
+										<div class="data-artist">{{ track.artists.0.name }}</div>
+									</div>
+								</div>
+								<div class="track-duration">{{ track.duration_ms|ms_to_m_s }}</div>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</main>
+
+</body>
+</html>

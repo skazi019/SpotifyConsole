@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --backgroundcolor: rgb(32, 32, 32);
+  --spotifybackground: rgb(45, 45, 45);
+  --spotifygray: rgb(170, 170, 170);
+  --spotifygreen: rgb(33, 177, 84);
+  --spotifygreentext: rgb(238, 236, 233);
+  --spotifytext: rgb(87, 234, 139);
+}
+
+body {
+  background-color: var(--backgroundcolor);
+  color: var(--spotifygreentext);
+  font-family: 'Roboto';
+  margin: auto;
+}
+
+.navbar {
+  background-color: var(--spotifybackground);
+  height: 100vh;
+  position: fixed;
+  width: 5em;
+}
+
+.navbar .navbar-nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar .navbar-nav .nav-item {
+  width: 70%;
+}
+
+.navbar .navbar-nav .nav-item a {
+  text-decoration: none;
+  color: var(--spotifygray);
+}
+
+.navbar .navbar-nav .nav-item a .link-text:hover {
+  color: var(--spotifygreentext);
+}
+
+.navbar .navbar-nav .nav-item:first-child {
+  top: 0;
+  margin-top: 1em;
+  position: absolute;
+}
+
+.navbar .navbar-nav .nav-item:first-child img {
+  height: 3em;
+  width: 3em;
+}
+
+.navbar .navbar-nav .nav-item:last-child {
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 1em;
+}
+
+main {
+  position: relative;
+  padding: 0 5em;
+  left: 5em;
+}
+
+main .profile-data {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  padding-top: 5em;
+}
+
+main .profile-data .user-image-name {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .profile-data .user-image-name img {
+  height: 10em;
+  width: 10em;
+  border-radius: 50%;
+  margin: auto;
+}
+
+main .profile-data .user-image-name .user-name {
+  margin-top: .5em;
+  font-size: 3em;
+  font-weight: 500;
+  text-align: center;
+}
+
+main .profile-data .user-info {
+  margin: auto;
+}
+
+main .profile-data .user-info .info {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+main .profile-data .user-info .info li {
+  font-size: 1em;
+  padding-left: 0;
+  padding: 1em;
+  text-align: center;
+}
+
+main .profile-data .user-info .info li .sub-text {
+  color: var(--spotifygray);
+  display: block;
+  font-size: .7em;
+}
+
+main .artist-track-div {
+  margin-top: 3em;
+  font-size: .9em;
+}
+
+main .artist-track-div .data-div {
+  padding: .5em 2em;
+}
+
+main .artist-track-div .data-div .data-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .artist-track-div .data-div .data-header .data-heading {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+main .artist-track-div .data-div .data-header .data-see-more {
+  border-radius: 2em;
+  border: 1px solid var(--spotifygray);
+  color: var(--spotifygreentext);
+  font-size: 1em;
+  padding: .5em 1em;
+  text-decoration: none;
+}
+
+main .artist-track-div .data-div .artists-list {
+  margin-top: 1em;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+main .artist-track-div .data-div .artists-list .artist-item {
+  padding-bottom: 1.5em;
+}
+
+main .artist-track-div .data-div .artists-list .artist-item a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--spotifygreentext);
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5em;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  text-decoration: none;
+}
+
+main .artist-track-div .data-div .artists-list .artist-item .data-image {
+  width: 4.5em;
+  height: 4.5em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+main .artist-track-div .data-div .artists-list .artist-item .data-name {
+  font-size: 1.2em;
+}
+
+main .artist-track-div .data-div .artists-list .artist-item:last-child {
+  padding-bottom: 0;
+}
+
+main .artist-track-div .data-div .track-list {
+  margin-top: 1em;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+main .artist-track-div .data-div .track-list .track-item {
+  padding-bottom: 1.5em;
+}
+
+main .artist-track-div .data-div .track-list .track-item a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--spotifygreentext);
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5em;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  text-decoration: none;
+}
+
+main .artist-track-div .data-div .track-list .track-item a .data-image {
+  width: 4.5em;
+  height: 4.5em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .artist-track-div .data-div .track-list .track-item a .track-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .artist-track-div .data-div .track-list .track-item a .track-details .data-name {
+  font-size: 1.2em;
+}
+
+main .artist-track-div .data-div .track-list .track-item a .track-details .track-artist-album {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--spotifygray);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1em;
+  gap: .5em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+main .artist-track-div .data-div .track-list .track-item a .track-details .track-artist-album .data-dot-separator {
+  background-color: var(--spotifygray);
+  border-radius: 50%;
+  height: .2em;
+  opacity: 0.7;
+  width: .2em;
+}
+
+main .artist-track-div .data-div .track-list .track-item a:last-child {
+  padding-bottom: 0;
+}
+
+main .artist-track-div .data-div .track-list .track-item .track-duration {
+  font-size: 1em;
+  color: var(--spotifygreentext);
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 480px) {
+  .artist-track-div {
+    max-width: 480px;
+    margin: 3em auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .artist-track-div {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1em;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 3em 5em;
+    max-width: 768px;
+    width: 100%;
+  }
+  .artist-track-div .data-div {
+    padding: 1em 2em;
+    width: 50%;
+  }
+  .artist-track-div .data-div:nth-child(2) .data-header {
+    margin-top: 1em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .artist-track-div {
+    max-width: 1270px;
+    margin: 3em 5em;
+  }
+  .artist-track-div .data-div .data-header .data-heading {
+    font-size: 1.3em;
+  }
+  .artist-track-div .data-div .data-header .data-see-more {
+    font-size: 1em;
+  }
+}
+/*# sourceMappingURL=profile.css.map */
